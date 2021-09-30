@@ -1,15 +1,13 @@
 /* ---------- root variables ---------- */
 :root {
-  --green: rgb(38, 76, 89);
-   --green-opacity: rgba(38, 76, 89, 0.2);
-  --light-green: rgb(172, 198, 201);
+  --grey: #474a4f;
+  --grey-opacity: rgba(38, 76, 89, 0.2);
+  --light-grey: rgb(172, 198, 201);
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
   --white: #fff;
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --text-color-out-of-stock: rgb(89, 38, 38);
-  --text-color-in-stock: rgb(172, 198, 201);
 }
 
 /* ---------- general styling ---------- */
@@ -19,6 +17,7 @@ html {
   height: 100%;
   text-align: center;
   width: 100%;
+  background-color: #222629;
 }
 
 body {
@@ -43,47 +42,14 @@ h3 {
   margin: 0.5em 0 0.2em;
 }
 
-img{
+img {
   width: 100%;
   height: auto;
 }
 
-/* ---------- topbar styling ---------- */
-.topbar {
-  background-color: var(--green);
-  color: var(--text-color-light);
-  padding: 13.5px;
-  text-transform: uppercase;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
-
-.topbar h2 {
-  margin: 0;
-  font-weight: 400;
-}
-
-.topbar a {
-  text-decoration: none;
-  color: var(--text-color-light);
-  position: absolute;
-  top: 20px;
-}
-
-.topbar a.left {
-  left: 20px;
-}
-
-.topbar a.right {
-  right: 20px;
-}
-
 /* ---------- nav styling ---------- */
 nav {
-  background-color: var(--green);
+  background-color: var(--grey);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -111,8 +77,8 @@ nav a:hover {
 
 /* Add a color to the active/current link */
 nav a.active {
-  background-color: var(--light-green);
-  color: var(--green);
+  background-color: var(--light-grey);
+  color: var(--grey);
 }
 
 /* ---------- page styling ---------- */
@@ -137,11 +103,11 @@ nav a.active {
 /* fade in */
 @keyframes fadeIn {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -165,7 +131,7 @@ nav a.active {
 
 @media (min-width: 600px) {
   .grid-container {
-     grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -175,7 +141,7 @@ nav a.active {
   }
 }
 
-.grid-container>article {
+.grid-container > article {
   text-align: center;
   padding: 2em 1em;
   background-color: var(--white);
@@ -183,11 +149,11 @@ nav a.active {
   cursor: pointer;
 }
 
-.grid-container>article:hover {
-  box-shadow: 0 8px 16px 0 var(--green-opacity);
+.grid-container > article:hover {
+  box-shadow: 0 8px 16px 0 var(--grey-opacity);
 }
 
-.grid-container>article img {
+.grid-container > article img {
   width: 100%;
   max-width: 250px;
   height: auto;
@@ -196,7 +162,7 @@ nav a.active {
 /* ---------- tools grid styling ---------- */
 
 .tools-grid {
-  background-color: var(--light-green);
+  background-color: var(--light-grey);
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 1em;
@@ -205,12 +171,12 @@ nav a.active {
 }
 
 @media (min-width: 600px) {
-  .tools-grid{
+  .tools-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.tools-grid label{
+.tools-grid label {
   max-width: 350px;
 }
 
@@ -220,25 +186,25 @@ form {
   margin: auto;
 }
 
-form button{
+form button {
   padding: 12px 15px;
   font-size: 1em;
   width: 100%;
   max-width: 350px;
 }
 
- button {
+button {
   font-weight: 300;
   text-align: center;
   cursor: pointer;
   border: none;
   border-radius: 0;
   color: var(--text-color-light);
-  background-color: var(--green);
+  background-color: var(--grey);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: .5em 1em;
-  font-size: .8em;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
 }
 
 input {
@@ -249,7 +215,7 @@ input {
   box-sizing: border-box;
   display: block;
   background: var(--white);
-  border: 5px solid var(--light-green);
+  border: 5px solid var(--light-grey);
 }
 
 /* ---------- loader styling ---------- */
@@ -268,7 +234,7 @@ input {
 .spinner {
   border: 5px solid var(--light-grey);
   border-radius: 50%;
-  border-top: 5px solid var(--light-green);
+  border-top: 5px solid var(--light-grey);
   width: 50px;
   height: 50px;
   -webkit-animation: spin 1s linear infinite;
@@ -331,7 +297,7 @@ input {
 
 /* When the checkbox is checked, add a blue background */
 .checkmark-container input:checked ~ .checkmark {
-  background-color: var(--green);
+  background-color: var(--grey);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -360,10 +326,10 @@ input {
 }
 
 /* ---------- custom select styling ---------- */
-select{
-  background-color: var(--light-green);
+select {
+  background-color: var(--light-grey);
   border: none;
-  color: var(--green);
+  color: var(--grey);
   padding: 1em;
   margin: 1em;
   max-width: 350px;
@@ -371,7 +337,7 @@ select{
 }
 
 /* ---------- custom select styling ---------- */
-#detail-view-container{
+#detail-view-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1em;
