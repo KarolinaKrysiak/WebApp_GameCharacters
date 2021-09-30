@@ -22,7 +22,16 @@
 
     <!-- pages -->
     <!-- list page -->
-    <section id="list" class="page"></section>
+    <section id="list" class="page">
+      <input
+        type="search"
+        placeholder="Search"
+        onkeyup="search(this.value)"
+        onsearch="search('')"
+      />
+
+      <section id="characters-container"></section>
+    </section>
 
     <!-- random page -->
     <section id="random" class="page"></section>
@@ -33,11 +42,10 @@
     <!-- add new characters page -->
     <section id="add" class="page">
       <form>
-        <input id="brand" type="text" name="brand" placeholder="Brand" />
-        <input id="model" type="text" name="model" placeholder="Model" />
-        <input id="price" type="text" name="price" placeholder="Price" />
+        <input id="name" type="text" name="name" placeholder="Name" />
+        <input id="game" type="text" name="game" placeholder="Game" />
         <input id="img" type="text" name="img" placeholder="Image URL" />
-        <button type="button" name="button" onclick="addNewProduct()">
+        <button type="button" name="button" onclick="addNewCharacter()">
           Save
         </button>
       </form>
