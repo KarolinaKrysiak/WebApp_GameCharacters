@@ -24,7 +24,7 @@ function appendCharacters(characters) {
   let htmlTemplate = "";
   for (let character of characters) {
     htmlTemplate += /*html*/`
-        <article onclick="showDetailView(${character.id})">
+        <article onclick="showDetailView(${character.description})">
           <img src="${character.img}">
           <h2>${character.name}</h2>
           <h3>${character.game}</h3>
