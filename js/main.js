@@ -2,67 +2,71 @@
 
 // =========== character functionality =========== //
 /*
-global variables: _characters
+global variables: _characters _selectedcharacterId
 */
 let _characters = [];
 
 /*
 Fetches json data from the file characters.json
 */
-fetch("json/data.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    _characters = data;
-    appendcharacters(_characters);
-  });
-
-function appendcharacters(characters) {
-  let htmlTemplate = "";
-  for (let character of characters) {
-    htmlTemplate += /*html*/ `
-      <article class="${character.status}">
-        <img src="${character.img}">
-        <h2>${character.name}</h2>
-        <h3>${character.game}</h3>
-      </article>
-    `;
-  }
-  document.querySelector("#characters-container").innerHTML = htmlTemplate;
+async function fetchData() {
+  const response = await fetch('json/data.json');
+  const data = await response.json();
+  _characters = data;
+  console.log(_characters);
+  appendCharacters(_characters);
+  showLoader(false);
 }
 
-function addNewcharacter() {
-  let name = document.querySelector("#name").value;
-  let game = document.querySelector("#game").value;
-  let img = document.querySelector("#img").value;
+fetchData();
 
-  if (game && name && img) {
-    _characters.push({
-      game,
-      name,
-      img,
-    });
+function appendCharacters(characters) {
+  let htmlTemplate = "";
+  for (let character of characters) {
+    htmlTemplate += /*html*/`
+        <article onclick="showDetailView(${character.id})">
+          <img src="${character.img}">
+          <h2>${character.name}</h2>
+          <h3>${character.game}</h3>
+        </article>
+    `;
+  }
+  document.querySelector('#characters-container').innerHTML = htmlTemplate;
+}
 
-    appendcharacters(_characters);
-    navigateTo("characters");
-    document.querySelector("#game").value = "";
+function addNewCharacter() {
+
+  let name = document.querySelector('#name').value;
+  let game = document.querySelector('#game').value;
+  let description = document.querySelector('#description').value;
+  let img = document.querySelector('#img').value;
+
+  if (name && game && description && img) {
+    let newCharacter = {
+      name: name,
+      game: game,
+      description: description,
+      img: img,
+    }
+    _characters.push(newCharacter);
+
+    appendCharacters(_characters);
+    navigateTo('list');
   } else {
-    alert("Please fill out all fields");
+    alert('Please fill out all fields');
   }
 }
 
 function search(value) {
   let searchQuery = value.toLowerCase();
-  let filteredcharacters = [];
+  let filteredCharacters = [];
   for (let character of _characters) {
     let name = character.name.toLowerCase();
     let game = character.game.toLowerCase();
     if (name.includes(searchQuery) || game.includes(searchQuery)) {
-      filteredcharacters.push(character);
+      filteredCharacters.push(character);
     }
   }
-  console.log(filteredcharacters);
-  appendcharacters(filteredcharacters);
+  console.log(filteredCharacters);
+  appendCharacters(filteredCharacters);
 }

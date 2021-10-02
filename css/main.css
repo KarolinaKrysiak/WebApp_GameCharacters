@@ -125,16 +125,11 @@ nav a.active {
 /* ---------- grid container styling ---------- */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   padding: 1em;
   gap: 1em;
 }
 
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 @media (min-width: 992px) {
   .grid-container {

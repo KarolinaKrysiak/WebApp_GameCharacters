@@ -11,13 +11,13 @@
     <link rel="shortcut icon" type="image/png" href="#" />
   </head>
 
-  <body>
+  <body onhashchange="pageChange()">
     <!-- tabbar navigation -->
     <nav class="tabbar">
-      <a href="#/" class="nav-link">List</a>
-      <a href="#/random" class="nav-link">Random</a>
-      <a href="#/favourite" class="nav-link">Favourite</a>
-      <a href="#/add" class="nav-link">Add new</a>
+      <a href="#list" class="nav-link">List</a>
+      <a href="#random" class="nav-link">Random</a>
+      <a href="#favourite" class="nav-link">Favourite</a>
+      <a href="#add" class="nav-link">Add new</a>
     </nav>
 
     <!-- pages -->
@@ -30,7 +30,7 @@
         onsearch="search('')"
       />
 
-      <section id="characters-container"></section>
+      <section id="characters-container" class="grid-container"></section>
     </section>
 
     <!-- random page -->
@@ -44,6 +44,9 @@
       <form>
         <input id="name" type="text" name="name" placeholder="Name" />
         <input id="game" type="text" name="game" placeholder="Game" />
+        <input id="gender" type="text" name="gender" placeholder="Gender" />
+        <input id="race" type="text" name="race" placeholder="Race" />
+        <input id="description" type="text" name="description" placeholder="Description" />
         <input id="img" type="text" name="img" placeholder="Image URL" />
         <button type="button" name="button" onclick="addNewCharacter()">
           Save
@@ -54,8 +57,8 @@
     <!-- page with added characters -->
     <section id="added" class="page"></section>
 
-    <!-- SPA Router functionality  -->
-    <script src="js/router.js"></script>
+    <!-- SPA functionality  -->
+    <script src="js/spa.js"></script>
     <!-- main js file -->
     <script src="js/main.js"></script>
   </body>
