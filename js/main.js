@@ -24,7 +24,7 @@ function appendCharacters(characters) {
   let htmlTemplate = "";
   for (let character of characters) {
     htmlTemplate += /*html*/`
-        <article onclick="showDetailView(${character.description})">
+        <article onclick="showDetailView(${character.id})">
           <img src="${character.img}">
           <h2>${character.name}</h2>
           <h3>${character.game}</h3>
@@ -34,6 +34,22 @@ function appendCharacters(characters) {
   document.querySelector('#characters-container').innerHTML = htmlTemplate;
 }
 
+/* Shows detailed view of character */
+function showDetailView(id) {
+  const characterToShow = _characters.find(character => character.id === id);
+  navigateTo("detail-view");
+  document.querySelector("#detail-view .title").innerHTML = characterToShow.name;
+  document.querySelector("#detail-view-container").innerHTML = /*html*/`
+    <img src="${characterToShow.img}">
+    <article>
+      <h2>${characterToShow.name}</h2>
+      <h3>${characterToShow.game}</h3>
+      <p>Race: ${characterToShow.race}</p>
+    </article>
+  `;
+}
+
+/* Add new character */
 function addNewCharacter() {
 
   let name = document.querySelector('#name').value;

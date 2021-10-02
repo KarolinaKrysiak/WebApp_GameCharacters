@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "The Stranger",
     "game": "Furi",
     "img": "#",
@@ -8,6 +9,7 @@
     "race": "alien"
   },
   {
+    "id": 2,
     "name": "Alan Wake",
     "game": "Alan Wake",
     "img": "#",
@@ -16,6 +18,7 @@
     "race":"human"
   },
   {
+    "id": 3,
     "name": "Talion",
     "game": "Middle-earth: Shadow of Mordor",
     "img": "#",
@@ -24,6 +27,7 @@
     "race":"human"
   },
   {
+    "id": 4,
     "name": "Shay Patrick Cormac",
     "game": "Assassin's Creed Rogue",
     "img": "#",
