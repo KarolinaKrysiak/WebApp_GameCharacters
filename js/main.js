@@ -15,7 +15,6 @@ async function fetchData() {
   _characters = data;
   console.log(_characters);
   appendCharacters(_characters);
-  showLoader(false);
 }
 
 fetchData();
@@ -24,10 +23,12 @@ function appendCharacters(characters) {
   let htmlTemplate = "";
   for (let character of characters) {
     htmlTemplate += /*html*/`
+    <article class="${character.status}">
         <article onclick="showDetailView(${character.id})">
           <img src="${character.img}">
           <h2>${character.name}</h2>
           <h3>${character.game}</h3>
+        </article>
         </article>
     `;
   }
