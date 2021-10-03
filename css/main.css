@@ -13,7 +13,7 @@
 
 /* ---------- general styling ---------- */
 html {
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
   font-family: var(--font-family);
   height: 100%;
   text-align: center;
@@ -76,7 +76,7 @@ img{
 }
 
 .function-icon {
-  height: 20px;
+  height: 30px;
 }
 
 /* ---------- tabbar styling ---------- */
@@ -157,6 +157,7 @@ img{
   grid-template-columns: 1fr 1fr;
   padding: 1em;
   gap: 1em;
+  color: var(--text-color-light);
 }
 
 
@@ -168,7 +169,6 @@ img{
 }
 
 .grid-container>article {
-  text-align: center;
   padding: 2em 1em;
   background-color: var(--grey);
   transition: 0.3s;
@@ -206,14 +206,11 @@ img{
   max-width: 350px;
 }
 
-/* ---------- character styling ---------- */
-.outOfStock p.status {
-  color: var(--text-color-out-of-stock);
+.sort-div{
+  display: flex;
+  flex-direction: row;
 }
 
-.inStock p.status {
-  color: var(--text-color-in-stock);
-}
 
 /* ---------- form styling ---------- */
 /* input form stryling */
@@ -251,6 +248,7 @@ input {
   display: block;
   background: var(--white);
   border: 0;
+  border-radius: 100px;
 }
 
 /* ---------- loader styling ---------- */
@@ -376,6 +374,7 @@ select{
   grid-template-columns: 1fr 1fr;
   padding: 1em;
   gap: 1em;
+  color: var(--text-color-light);
 }
 
 /* The Modal (background) */

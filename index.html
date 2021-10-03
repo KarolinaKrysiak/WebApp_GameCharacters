@@ -25,6 +25,7 @@
       <h2>characters</h2>
     </header>
     <section class="tools-grid">
+      <div class="sort-div"> 
       <label for="sortBy"><img class="function-icon" alt="sort by" src="icons/sort.svg">
         <select id="sortBy" onchange="orderBy(this.value)">
           <option value="" selected disabled>Choose here</option>
@@ -32,6 +33,7 @@
           <option value="game">Game</option>
         </select>
       </label>
+    </div>
       <div class="button" id="myBtn"><img class="function-icon" alt="filter" src="icons/filter.svg"></div>
       <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
     </section>
