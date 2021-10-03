@@ -1,15 +1,14 @@
 /* ---------- root variables ---------- */
 :root {
-  --green: rgb(38, 76, 89);
-   --green-opacity: rgba(38, 76, 89, 0.2);
-  --light-green: rgb(172, 198, 201);
+  --black: #222629;
+  --grey: #474A4F;
+   --grey-opacity: rgba(68, 68, 68, 0.2);
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
   --white: #fff;
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --text-color-out-of-stock: rgb(89, 38, 38);
-  --text-color-in-stock: rgb(172, 198, 201);
+  --blue: #07CFF6;
 }
 
 /* ---------- general styling ---------- */
@@ -23,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  background-color: var(--black);
 }
 
 h1 {
@@ -44,7 +44,7 @@ img{
 
 /* ---------- topbar styling ---------- */
 .topbar {
-  background-color: var(--green);
+  background-color: var(--black);
   color: var(--text-color-light);
   padding: 13.5px;
   text-transform: uppercase;
@@ -77,7 +77,7 @@ img{
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-  background-color: var(--green);
+  background-color: var(--black);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -105,8 +105,13 @@ img{
 
 /* Add a color to the active/current link */
 .tabbar a.active {
-  background-color: var(--light-green);
-  color: var(--green);
+  background-color: var(--light-grey);
+  color: var(--grey);
+}
+
+/* Style the icons */
+.menu-icon{
+  height: 30px;
 }
 
 /* ---------- page styling ---------- */
@@ -114,7 +119,6 @@ img{
   display: none;
   /*min heigh is screen heigh minus height of tab and top bar */
   min-height: calc(100vh - 110px);
-  background: var(--light-grey);
   animation: fadeIn 0.4s;
   /* padding equals height of tabbar and topbar */
   padding: 55px 0;
@@ -146,16 +150,12 @@ img{
 /* ---------- grid container styling ---------- */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   padding: 1em;
   gap: 1em;
 }
 
-@media (min-width: 600px) {
-  .grid-container {
-     grid-template-columns: 1fr 1fr;
-  }
-}
+
 
 @media (min-width: 992px) {
   .grid-container {
@@ -172,7 +172,7 @@ img{
 }
 
 .grid-container>article:hover {
-  box-shadow: 0 8px 16px 0 var(--green-opacity);
+  box-shadow: 0 8px 16px 0 var(--grey-opacity);
 }
 
 .grid-container>article img {
@@ -184,7 +184,7 @@ img{
 /* ---------- tools grid styling ---------- */
 
 .tools-grid {
-  background-color: var(--light-green);
+  background-color: var(--light-grey);
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 1em;
@@ -231,7 +231,7 @@ form button{
   border: none;
   border-radius: 0;
   color: var(--text-color-light);
-  background-color: var(--green);
+  background-color: var(--grey);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: .5em 1em;
@@ -265,7 +265,7 @@ input {
 .spinner {
   border: 5px solid var(--light-grey);
   border-radius: 50%;
-  border-top: 5px solid var(--light-green);
+  border-top: 5px solid var(--light-grey);
   width: 50px;
   height: 50px;
   -webkit-animation: spin 1s linear infinite;
@@ -328,7 +328,7 @@ input {
 
 /* When the checkbox is checked, add a blue background */
 .checkmark-container input:checked ~ .checkmark {
-  background-color: var(--green);
+  background-color: var(--grey);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -358,7 +358,7 @@ input {
 
 /* ---------- custom select styling ---------- */
 select{
-  background-color: var(--green);
+  background-color: var(--grey);
   border: none;
   color: var(--text-color-light);
   padding: 1em;
@@ -376,16 +376,16 @@ select{
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 999;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
@@ -427,7 +427,7 @@ select{
   padding: 1em;
   text-decoration: none;
   color: #fff;
-  background-color: var(--dark-green);
+  background-color: var(--dark-grey);
   width: 70%;
   text-align: center;
   margin: 15px auto;
