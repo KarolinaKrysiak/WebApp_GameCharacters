@@ -13,7 +13,7 @@
 
 /* ---------- general styling ---------- */
 html {
-  color: var(--text-color-dark);
+  color: var(--text-color-light);
   font-family: var(--font-family);
   height: 100%;
   text-align: center;
@@ -170,7 +170,7 @@ img{
 .grid-container>article {
   text-align: center;
   padding: 2em 1em;
-  background-color: var(--white);
+  background-color: var(--grey);
   transition: 0.3s;
   cursor: pointer;
 }
