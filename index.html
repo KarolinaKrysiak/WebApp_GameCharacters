@@ -1,71 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Game characters finder</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" type="image/png" href="#" />
-  </head>
 
-  <body onhashchange="pageChange()">
-    <!-- tabbar navigation -->
-    <nav class="tabbar">
-      <a href="#list">List</a>
-      <a href="#random" >Random</a>
-      <a href="#favourite">Favourite</a>
-      <a href="#add">Add new</a>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <title>characters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="character Single Page Application">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="#" />
+</head>
 
-    <!-- pages -->
-    <!-- list page -->
-    <section id="list" class="page">
-      <input
-        type="search"
-        placeholder="Search"
-        onkeyup="search(this.value)"
-        onsearch="search('')"
-      />
+<body onhashchange="pageChange()">
+  <!-- tabbar navigation -->
+  <nav class="tabbar">
+    <a href="#characters">characters</a>
+    <a href="#favourite">Favourite</a>
+    <a href="#add">Add character</a>
+  </nav>
 
-      <section id="characters-container" class="grid-container"></section>
+  <!-- pages -->
+  <!-- home page -->
+  <section id="characters" class="page">
+    <header class="topbar">
+      <h2>characters</h2>
+    </header>
+    <section class="tools-grid">
+      <label for="sortBy">Order by:
+        <select id="sortBy" onchange="orderBy(this.value)">
+          <option value="" selected disabled>Choose here</option>
+          <option value="name">Name</option>
+          <option value="game">Game</option>
+        </select>
+      </label>
+      <div class="button" id="myBtn">+</div>
+      <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
     </section>
-
-    <!-- detail page -->
-  <section id="detail-view" class="page">
-      <a class="left" href="#list">Back</a>
-    <section id="detail-view-container"></section>
+    <section id="characters-container" class="grid-container"></section>
   </section>
 
-    <!-- random page -->
-    <section id="random" class="page"></section>
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-buttons">
+        <label for="maleCharacters" class="checkmark-container">Show male characters
+          <input type="checkbox" id="maleCharacters" onchange="showHideMale(this.checked)" checked>
+          <span class="checkmark"></span>
+        </label>
+        <label for="femaleCharacters" class="checkmark-container">Show female characters
+          <input type="checkbox" id="femaleCharacters" onchange="showHideFemale(this.checked)" checked>
+          <span class="checkmark"></span>
+        </label>
+        <label for="humanCharacters" class="checkmark-container">Show human characters
+          <input type="checkbox" id="humanCharacters" onchange="showHideHuman(this.checked)" checked>
+          <span class="checkmark"></span>
+        </label>
+        <label for="alienCharacters" class="checkmark-container">Show alien characters
+          <input type="checkbox" id="alienCharacters" onchange="showHideAlien(this.checked)" checked>
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
 
-    <!-- favourite page -->
-    <section id="favourite" class="page"></section>
+  <!-- create page -->
+  <section id="add" class="page">
+    <header class="topbar">
+      <h2>Add New character</h2>
+    </header>
+    <form>
+      <input id="name" type="text" name="name" placeholder="Name">
+      <input id="game" type="text" name="game" placeholder="Game">
+      <input id="gender" type="text" name="gender" placeholder="Gender">
+      <input id="race" type="text" name="race" placeholder="Race">
+      <input id="description" type="text" name="description" placeholder="Description">
+      <input id="img" type="text" name="img" placeholder="Image URL">
+      <button type="button" name="button" onclick="addNewcharacter()">Save</button>
+    </form>
+  </section>
 
-    <!-- add new characters page -->
-    <section id="add" class="page">
-      <form>
-        <input id="name" type="text" name="name" placeholder="Name" />
-        <input id="game" type="text" name="game" placeholder="Game" />
-        <input id="gender" type="text" name="gender" placeholder="Gender" />
-        <input id="race" type="text" name="race" placeholder="Race" />
-        <input id="description" type="text" name="description" placeholder="Description" />
-        <input id="img" type="text" name="img" placeholder="Image URL" />
-        <button type="button" name="button" onclick="addNewCharacter()">
-          Save
-        </button>
-      </form>
-    </section>
 
-    <!-- page with added new characters -->
-    <section id="added" class="page"></section>
 
-    <!-- SPA functionality  -->
-    <script src="js/spa.js"></script>
-    <!-- main js file -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- detail view page -->
+  <section id="detail-view" class="page">
+    <header class="topbar">
+      <a class="left" href="#characters">Back</a>
+      <h2 class="title">character</h2>
+    </header>
+    <section id="detail-view-container"></section>
+    <div  class="bottom-buttons">
+      <button type="button" name="button" class="bottom-button" onclick="">x</button>
+      <button type="button" name="button" class="bottom-button" onclick="">*</button>
+      <button type="button" name="button" class="bottom-button" onclick="">!</button>
+    </div>
+  </section>
+
+  <!-- loader  -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+
+  <!-- SPA functionality  -->
+  <script src="js/spa.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>

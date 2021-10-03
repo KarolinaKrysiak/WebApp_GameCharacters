@@ -5,16 +5,18 @@
 global variables: _characters _selectedcharacterId
 */
 let _characters = [];
+let _selectedcharacterId;
 
 /*
 Fetches json data from the file characters.json
 */
 async function fetchData() {
-  const response = await fetch('json/data.json');
+  const response = await fetch('json/characters.json');
   const data = await response.json();
   _characters = data;
   console.log(_characters);
   appendCharacters(_characters);
+  showLoader(false);
 }
 
 fetchData();
@@ -23,19 +25,129 @@ function appendCharacters(characters) {
   let htmlTemplate = "";
   for (let character of characters) {
     htmlTemplate += /*html*/`
-    <article class="${character.status}">
+      <article class="${character.status}">
         <article onclick="showDetailView(${character.id})">
           <img src="${character.img}">
           <h2>${character.name}</h2>
           <h3>${character.game}</h3>
         </article>
-        </article>
+       
+      </article>
     `;
   }
   document.querySelector('#characters-container').innerHTML = htmlTemplate;
 }
 
-/* Shows detailed view of character */
+function addNewcharacter() {
+  showLoader(true);
+
+  let game = document.querySelector('#game').value;
+  let name = document.querySelector('#name').value;
+  let race = document.querySelector('#race').value;
+  let gender = document.querySelector('#gender').value;
+  let description = document.querySelector('#description').value;
+  let img = document.querySelector('#img').value;
+  const id = Date.now(); // dummy generated user id
+
+  if (game && name && race && gender && description && img) {
+    let newcharacter = {
+      game: game,
+      name: name,
+      race: race,
+      gender: gender,
+      description: description,
+      img: img,
+      id: id
+    }
+    _characters.push(newcharacter);
+
+    appendCharacters(_characters);
+    navigateTo('characters');
+  } else {
+    alert('Please fill out all fields');
+  }
+  showLoader(false);
+}
+
+
+
+function search(value) {
+  let searchQuery = value.toLowerCase();
+  let filteredcharacters = [];
+  for (let character of _characters) {
+    let name = character.name.toLowerCase();
+    let game = character.game.toLowerCase();
+    if (name.includes(searchQuery) || game.includes(searchQuery)) {
+      filteredcharacters.push(character);
+    }
+  }
+  appendCharacters(filteredcharacters);
+}
+
+
+// filter functions
+
+
+function showHideMale(checked) {
+  if (checked) {
+    appendCharacters(_characters);
+  } else {
+    const maleCharacters = _characters.filter(character => character.gender != "Male");
+    appendCharacters(maleCharacters);
+  }
+}
+
+function showHideFemale(checked) {
+  if (checked) {
+    appendCharacters(_characters);
+  } else {
+    const femaleCharacters = _characters.filter(character => character.gender != "Female");
+    appendCharacters(femaleCharacters);
+  }
+}
+
+function showHideHuman(checked) {
+  if (checked) {
+    appendCharacters(_characters);
+  } else {
+    const humanCharacters = _characters.filter(character => character.race != "Human");
+    appendCharacters(humanCharacters);
+  }
+}
+
+function showHideAlien(checked) {
+  if (checked) {
+    appendCharacters(_characters);
+  } else {
+    const alienCharacters = _characters.filter(character => character.race != "Alien");
+    appendCharacters(alienCharacters);
+  }
+}
+
+
+
+function orderBy(option) {
+  if (option === "game") {
+    orderBygame();
+  } else if (option === "name") {
+    orderByname();
+  } 
+}
+
+function orderBygame() {
+  _characters.sort((character1, character2) => {
+    return character1.game.localeCompare(character2.game);
+  });
+  appendCharacters(_characters);
+}
+
+function orderByname() {
+  _characters.sort((character1, character2) => {
+    return character1.name.localeCompare(character2.name);
+  });
+  appendCharacters(_characters);
+}
+
 function showDetailView(id) {
   const characterToShow = _characters.find(character => character.id === id);
   navigateTo("detail-view");
@@ -45,45 +157,37 @@ function showDetailView(id) {
     <article>
       <h2>${characterToShow.name}</h2>
       <h3>${characterToShow.game}</h3>
+      <p>Gender: ${characterToShow.gender}</p>
       <p>Race: ${characterToShow.race}</p>
+      <p>${characterToShow.description}</p>
     </article>
   `;
 }
 
-/* Add new character */
-function addNewCharacter() {
+// Get the modal
+var modal = document.getElementById("myModal");
 
-  let name = document.querySelector('#name').value;
-  let game = document.querySelector('#game').value;
-  let description = document.querySelector('#description').value;
-  let img = document.querySelector('#img').value;
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
-  if (name && game && description && img) {
-    let newCharacter = {
-      name: name,
-      game: game,
-      description: description,
-      img: img,
-    }
-    _characters.push(newCharacter);
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-    appendCharacters(_characters);
-    navigateTo('list');
-  } else {
-    alert('Please fill out all fields');
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-}
+};
 
-function search(value) {
-  let searchQuery = value.toLowerCase();
-  let filteredCharacters = [];
-  for (let character of _characters) {
-    let name = character.name.toLowerCase();
-    let game = character.game.toLowerCase();
-    if (name.includes(searchQuery) || game.includes(searchQuery)) {
-      filteredCharacters.push(character);
-    }
-  }
-  console.log(filteredCharacters);
-  appendCharacters(filteredCharacters);
-}
+
