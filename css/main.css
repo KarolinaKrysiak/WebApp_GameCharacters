@@ -75,6 +75,10 @@ img{
   right: 20px;
 }
 
+.function-icon {
+  height: 20px;
+}
+
 /* ---------- tabbar styling ---------- */
 .tabbar {
   background-color: var(--black);
@@ -184,7 +188,7 @@ img{
 /* ---------- tools grid styling ---------- */
 
 .tools-grid {
-  background-color: var(--light-grey);
+  background-color: var(--black);
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 1em;
