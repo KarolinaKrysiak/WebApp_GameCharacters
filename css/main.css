@@ -173,6 +173,13 @@ img{
   background-color: var(--grey);
   transition: 0.3s;
   cursor: pointer;
+  max-width: 300px;
+}
+
+@media (max-width: 992px) {
+  .grid-container>article {
+    padding: 1em;
+  }
 }
 
 .grid-container>article:hover {
@@ -207,8 +214,9 @@ img{
 }
 
 .sort-div{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 
@@ -371,10 +379,23 @@ select{
 /* ---------- detail view styling ---------- */
 #detail-view-container{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 1em;
   gap: 1em;
   color: var(--text-color-light);
+}
+
+.description{
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  #detail-view-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    gap: 1em;
+  }
 }
 
 /* The Modal (background) */

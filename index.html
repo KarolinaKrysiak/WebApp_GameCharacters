@@ -26,15 +26,17 @@
     </header>
     <section class="tools-grid">
       <div class="sort-div"> 
-      <label for="sortBy"><img class="function-icon" alt="sort by" src="icons/sort.svg">
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+      <label for="sortBy"><img class="function-icon" alt="sort by" src="icons/sort.svg"></label>
         <select id="sortBy" onchange="orderBy(this.value)">
           <option value="" selected disabled>Choose here</option>
           <option value="name">Name</option>
           <option value="game">Game</option>
         </select>
-      </label>
-    </div>
+      </div>
+    
       <div class="button" id="myBtn"><img class="function-icon" alt="filter" src="icons/filter.svg"></div>
+    </div>
       <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')">
     </section>
     <section id="characters-container" class="grid-container"></section>

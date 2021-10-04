@@ -159,7 +159,7 @@ function showDetailView(id) {
       <h3>${characterToShow.game}</h3>
       <p>Gender: ${characterToShow.gender}</p>
       <p>Race: ${characterToShow.race}</p>
-      <p>${characterToShow.description}</p>
+      <p class="description">${characterToShow.description}</p>
     </article>
   `;
 }

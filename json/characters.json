@@ -3,7 +3,7 @@
     "id": 0,
     "name": "The Stranger",
     "game": "Furi",
-    "img": "https://static.wikia.nocookie.net/furigame/images/1/11/CoU2M9dVYAApIKV.jpg/revision/latest?cb=20160726230955",
+    "img": "img/furi1.png",
     "gender": "Male",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "race": "Alien"
@@ -12,7 +12,7 @@
     "id": 1,
     "name": "Alan Wake",
     "game": "Alan Wake",
-    "img": "#",
+    "img": "img/alan1.png",
     "gender": "Male",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "race":"Human"
@@ -21,7 +21,7 @@
     "id": 2,
     "name": "Talion",
     "game": "Middle-earth: Shadow of Mordor",
-    "img": "#",
+    "img": "img/me1.png",
     "gender": "Male",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "race":"Human"
@@ -30,7 +30,7 @@
     "id": 3,
     "name": "Shay Patrick Cormac",
     "game": "Assassin's Creed Rogue",
-    "img": "#",
+    "img": "img/ar.png",
     "gender": "Male",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "race":"Human"
