@@ -1,6 +1,7 @@
 [
   {
     "id": 0,
+    "favourite": 1,
     "name": "The Stranger",
     "game": "Furi",
     "img": "img/furi1.png",
@@ -10,6 +11,7 @@
   },
   {
     "id": 1,
+    "favourite": 0,
     "name": "Alan Wake",
     "game": "Alan Wake",
     "img": "img/alan1.png",
@@ -19,6 +21,7 @@
   },
   {
     "id": 2,
+    "favourite": 0,
     "name": "Talion",
     "game": "Middle-earth: Shadow of Mordor",
     "img": "img/me1.png",
@@ -28,6 +31,7 @@
   },
   {
     "id": 3,
+    "favourite": 1,
     "name": "Shay Patrick Cormac",
     "game": "Assassin's Creed Rogue",
     "img": "img/ar.png",

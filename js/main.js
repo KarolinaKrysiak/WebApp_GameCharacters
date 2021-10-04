@@ -2,10 +2,10 @@
 
 // =========== character functionality =========== //
 /*
-global variables: _characters _selectedcharacterId
+global variables: _characters  _favCharacters = [];
 */
 let _characters = [];
-let _selectedcharacterId;
+let _favCharacters = [];
 
 /*
 Fetches json data from the file characters.json
@@ -31,12 +31,48 @@ function appendCharacters(characters) {
           <h2>${character.name}</h2>
           <h3>${character.game}</h3>
         </article>
-       
       </article>
     `;
   }
   document.querySelector('#characters-container').innerHTML = htmlTemplate;
 }
+
+/*
+Fetches json data from the file favCharacters.json
+*/
+async function fetchNewData() {
+  const response = await fetch('json/characters.json');
+  const data = await response.json();
+  _favCharacters = data;
+  console.log(_favCharacters);
+  appendFavCharacters(_favCharacters);
+  showLoader(false);
+}
+
+fetchNewData();
+
+
+function appendFavCharacters(favCharacters) {
+  let htmlTemplate = "";
+  for (let character of favCharacters) {
+    htmlTemplate += /*html*/`
+      <article class="${character.status}">
+        <article onclick="showDetailView(${character.id})">
+          <img src="${character.img}">
+          <h2>${character.name}</h2>
+          <h3>${character.game}</h3>
+        </article>
+      </article>
+    `;
+  }
+
+  document.querySelector('#fav-characters-container').innerHTML = htmlTemplate;
+}
+
+
+/*
+Adds new character
+*/
 
 function addNewcharacter() {
   showLoader(true);
@@ -69,7 +105,7 @@ function addNewcharacter() {
   showLoader(false);
 }
 
-
+// Search functions
 
 function search(value) {
   let searchQuery = value.toLowerCase();
@@ -124,7 +160,7 @@ function showHideAlien(checked) {
   }
 }
 
-
+// Sort functions
 
 function orderBy(option) {
   if (option === "game") {
@@ -164,7 +200,7 @@ function showDetailView(id) {
   `;
 }
 
-// Get the modal
+// The modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
