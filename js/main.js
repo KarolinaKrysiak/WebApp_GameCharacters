@@ -205,13 +205,33 @@ function showDetailView(id) {
 }
 
 /*
+Shows game page
+*/
+
+function showGame(id) {
+  const gameToShow = _characters.find(character => character.id === id);
+  navigateTo("game");
+  document.querySelector("#game .title").innerHTML = gameToShow.game;
+  document.querySelector("#game-container").innerHTML = /*html*/`
+    <img src="${gameToShow.img}">
+    <article>
+      <h2>${gameToShow.game}</h2>
+      <h3>${gameToShow.developer}</h3>
+      <p>Genre: ${gameToShow.genre}</p>
+      <p>Mode: ${gameToShow.mode}</p>
+      <p class="description">${gameToShow.description2}</p>
+    </article>
+  `;
+}
+
+/*
 Shows random detailed view
 */
 
 function showRandomDetailView(id) {
   const characterToShow = _characters.find(character => character.id === id);
   navigateTo("random");
-  document.querySelector("#detail-view .title").innerHTML = characterToShow.name;
+  document.querySelector("#random .title").innerHTML = characterToShow.name;
   document.querySelector("#random-detail-view-container").innerHTML = /*html*/`
     <img src="${characterToShow.img}">
     <article>

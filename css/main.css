@@ -398,6 +398,24 @@ select{
   }
 }
 
+/* game page */
+#game-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1em;
+  gap: 1em;
+  color: var(--text-color-light);
+}
+
+@media (min-width: 992px) {
+  #game-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    gap: 1em;
+  }
+}
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -440,20 +458,3 @@ select{
   cursor: pointer;
 }
 
-/* style for buttons */
-.modal-buttons {
-  display: flex;
-  flex-direction: column;
-  margin: 50px 0;
-}
-
-.modal-button {
-  padding: 1em;
-  text-decoration: none;
-  color: #fff;
-  background-color: var(--dark-grey);
-  width: 70%;
-  text-align: center;
-  margin: 15px auto;
-  border-radius: 100px;
-}

@@ -7,7 +7,12 @@
     "img": "img/furi1.png",
     "gender": "Male",
     "description": "The stranger is very aggressive at first, there's not much personality in him and seems to lack empathy. Throughout the game he doesn't utter a word and his facial epressions stayvery subtle. Later in game he becomes more passive and doesn't attack enemy on sight. Led by mysterious chracter called The Voice he tries to escape the prison his been locked in for at the beginning unknown reason.",
-    "race": "Alien"
+    "race": "Alien",
+    "genre": ["Action ", "Shoot 'em up ", "Hack and slash "],
+    "mode": "Single-player",
+    "developer": "The Game Bakers",
+    "platform": ["Microsoft Windows ", "PlayStation 4 ", "Xbox One ", "Nintendo Switch "],
+    "description2": "Furi is an indie bullet hell game in which you fight dynamic battles and your freedom is at stake. Designed by Takashi Okazaki, this epic arcade style game with an original soundtrack is a work of art in the hack and slash genre."
   },
   {
     "id": 1,
@@ -17,7 +22,13 @@
     "img": "img/alan1.png",
     "gender": "Male",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "race":"Human"
+    "race":"Human",
+    "genre": ["Action ", "Shoot 'em up ", "Hack and slash "],
+    "mode": "Single-player",
+    "developer": "The Game Bakers",
+    "platform": ["Microsoft Windows ", "PlayStation 4 ", "Xbox One ", "Nintendo Switch "],
+    "description2": "Furi is an indie bullet hell game in which you fight dynamic battles and your freedom is at stake. Designed by Takashi Okazaki, this epic arcade style game with an original soundtrack is a work of art in the hack and slash genre."
+
   },
   {
     "id": 2,
@@ -27,7 +38,12 @@
     "img": "img/me1.png",
     "gender": "Male",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "race":"Human"
+    "race":"Human",
+    "genre": ["Action ", "Shoot 'em up ", "Hack and slash "],
+    "mode": "Single-player",
+    "developer": "The Game Bakers",
+    "platform": ["Microsoft Windows ", "PlayStation 4 ", "Xbox One ", "Nintendo Switch "],
+    "description2": "Furi is an indie bullet hell game in which you fight dynamic battles and your freedom is at stake. Designed by Takashi Okazaki, this epic arcade style game with an original soundtrack is a work of art in the hack and slash genre."
   },
   {
     "id": 3,
@@ -37,6 +53,12 @@
     "img": "img/ar.png",
     "gender": "Male",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "race":"Human"
+    "race":"Human",
+    "genre": ["Action ", "Shoot 'em up ", "Hack and slash "],
+    "mode": "Single-player",
+    "developer": "The Game Bakers",
+    "platform": ["Microsoft Windows ", "PlayStation 4 ", "Xbox One ", "Nintendo Switch "],
+    "description2": "Furi is an indie bullet hell game in which you fight dynamic battles and your freedom is at stake. Designed by Takashi Okazaki, this epic arcade style game with an original soundtrack is a work of art in the hack and slash genre."
+  
   }
 ]
