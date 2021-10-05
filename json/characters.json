@@ -23,11 +23,11 @@
     "gender": "Male",
     "description": "Writer, author of best-selling novels, but suffering from creative impotence for two years. His wife, seeing the writer's difficult situation, takes him on vacation to the picturesque town of Bright Falls, which is to help him write another great book. He has extraordinary courage, resourcefulness and an original sense of humor, manifested mainly in life-threatening situations. He is easily irritated, which often causes him to get into trouble - this is evidenced by arguments with his wife, friends and fights with intrusive journalists.",
     "race":"Human",
-    "genre": ["Action ", "Shoot 'em up ", "Hack and slash "],
+    "genre": ["Action ", "Horror"],
     "mode": "Single-player",
-    "developer": "The Game Bakers",
+    "developer": "Remedy Entertainment",
     "platform": ["Microsoft Windows ", "PlayStation 4 ", "Xbox One ", "Nintendo Switch "],
-    "description2": "Furi is an indie bullet hell game in which you fight dynamic battles and your freedom is at stake. Designed by Takashi Okazaki, this epic arcade style game with an original soundtrack is a work of art in the hack and slash genre."
+    "description2": "Alan Wake is another work of the people responsible for the popular Max Payne brand. The whole thing was created in line with the convention of a psychological action thriller, and during development was clearly inspired by the cult TV series by David Lynch and Mark Frost called Twin Peaks (Twin Peaks)."
 
   },
   {

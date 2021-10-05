@@ -6,6 +6,7 @@ global variables: _characters  _favCharacters = [];
 */
 let _characters = [];
 let _favCharacters = [];
+let _selectedCharacter = [];
 
 /*
 Fetches json data from the file characters.json
@@ -189,6 +190,7 @@ Shows detailed view
 */
 
 function showDetailView(id) {
+  _selectedCharacter = id;
   const characterToShow = _characters.find(character => character.id === id);
   navigateTo("detail-view");
   document.querySelector("#detail-view .title").innerHTML = characterToShow.name;
@@ -208,10 +210,10 @@ function showDetailView(id) {
 Shows game page
 */
 
-function showGame(id) {
-  const gameToShow = _characters.find(character => character.id === id);
-  navigateTo("game");
-  document.querySelector("#game .title").innerHTML = gameToShow.game;
+function showGame() {
+  const gameToShow = _characters.find(character => character.id === _selectedCharacter);
+  navigateTo("game-detail");
+  document.querySelector("#game-detail .title").innerHTML = gameToShow.game;
   document.querySelector("#game-container").innerHTML = /*html*/`
     <img src="${gameToShow.img}">
     <article>
