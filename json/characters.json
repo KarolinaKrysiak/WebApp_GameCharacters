@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "favourite": 1,
+    "favourite": 0,
     "name": "The Stranger",
     "game": "Furi",
     "img": "img/furi1.png",
@@ -47,12 +47,12 @@
   },
   {
     "id": 3,
-    "favourite": 1,
+    "favourite": 0,
     "name": "Shay Patrick Cormac",
     "game": "Assassin's Creed Rogue",
     "img": "img/ar.png",
     "gender": "Male",
-    "description": "A fearless and young member of the Assassin Brotherhood who undergoes a dark transformation that will change the future of the American colonies forever. After a dangerous mission that ends with a tragedy, Shay turns his back on the Assassins, who retaliate against him. Rejected by the people he once called his brothers, Shay sets out to slain all those who turned against him and eventually become the most feared hunter of assassins in history.",
+    "description": "A fearless and young member of the Assassin Brotherhood who undergoes a dark transformation that will change the future of the American colonies forever. After a dangerous mission that ends with a tragedy, Shay turns his back on the Assassins, who retaliate against him. Rejected by the people he once called his brothers, Shay sets out to slain all those who turned against him and eventually becomes the most feared hunter of assassins in history.",
     "race":"Human",
     "genre": ["Action ", "Shoot 'em up ", "Hack and slash "],
     "mode": "Single-player",

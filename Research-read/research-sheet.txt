@@ -1,0 +1,110 @@
+
+
+                                                            DISCOVER
+                                       
+
+Nr.	Method	                Describe how the activity is planed/performed
+
+1.	Interviews	            Conducted interviews with target audience (people from my programme + my friends interested in gaming) to get some feedback and ideas on what to change or add	
+2.	Desk research           (competition)	Found apps that may be similar to my  idea		
+	                                                                               
+                                                            EXPLORE
+
+Nr.	Method	                Activity: Describe specifically how the activity is performed
+
+3.	Competitive analysis	Looked at some competitors and analysed their products (features, function, tone of voice, design)			
+4.	User scenario	        *		
+	
+                                                            TEST
+
+Nr.	Method	                Activity: Describe specifically how the activity is performed
+	
+
+5.	Think aloud test (1st mockup)           *the 2 imgs in the same folder*		
+		
+
+
+
+
+
+
+Detailed method description and documentation
+ and the results from the activity (nr. )
+
+1. Important points:
+•	The character they play in game matters to people, sometimes they stop playing if the character is annoying or makes decisions they don't like. And if the game itself is not that good but they like the main character they can keep on playing
+•	They can't recall using similar apps, they usually find games with online game shops or by friends recomendations
+•	Simple not complicated interface
+•	Dark colours (for scrolling on phone at night)
+•	Detailed description of game characters(picture, name, game, race, gender, age, weapons, fighting style, platforms where the game is available, personality of character, affiliations, story)
+•	Description of the game the characters are in (genre, video with gameplay, trailers, price)
+•	Option to add characters by users (waiting room page)
+•	Filter options 
+•	Add to favourite, list with favourite characters (star button in the corner)
+•	Suggested characters based on favourites
+•	Notifications about newly added characters (e.g. new characters similar to favourites)
+•	Friends (see what are the favourite characters of your friend and get an idea about what to play)
+
+questions:
+⦁	Do you pay attention to the character you play in games? Did the main character ever affected your decision whether play the game?
+⦁	What are your thoughts about this idea?
+⦁	What would make you interrested in the app?
+⦁	What could make you use the app?
+⦁	How do you think I could make it easy to use ?
+⦁	What do you like about this idea?
+⦁	What do you don't like about this idea?
+⦁	What would make you return?
+⦁	Have you ever used similar apps?
+⦁	What did like and disliked about those apps?
+
+
+2. "game-art-hq", "Games Finder" and any of the online game shops ("steam", "epic games store", etc.)
+
+3. Game-Art-HQ
+Features: video game character database, a lot of categories for game characters, detailed descriptions and pictures, art galleries, news page, reviews page
+Function: searching for game characters, commenting/discusion under character pages, 
+Tone of voice: informal, descriptive,
+Design: dark background, mostly black and white colors, old website vibes, basically no design, a lot of tables
+
+
+
+5.Tasks:   
+
+Find male, alien characters   
+
+Find more information about character 
+
+Find information about the game this character is in 
+
+Add the character of your choice to favorites and find them based on those criteria 
+
+View random character 
+
+Add the game character you would like to see in this app – before doing this check what other users have added before you  
+
+  
+
+ 1st version 
+
+Anna:  
+
+Started just clicking around, didn’t use filter options, didn’t know how to get to game information, heart button confusing, change it to button with description, function of ‘star’ button clear – could be in right top corner, navigation shows clear where the favorite characters are although it’s a bit weird to put it in the bottom menu – could be a filter option, ok icon for random although checked the filters first, confused about where to find characters added by users, add button clear – once clicked she knew how to check the added characters 
+
++ colors are nice – perfect for using app on sleepless nights, interesting idea – didn't see any similar apps to that, minimalistic layout is nice 
+
+-sorting options and navigation are a bit confusing 
+
+? More pictures of characters, links to videos with gameplay and trailers, more characters, longer descriptions (with more paragraphs) about story, fighting abilities, etc. 
+
+ 
+
+Martin:  
+
+Clicked on the filters - there could be more options, clicked on the character, layout a bit tinder like – clicked on the “heart” button to get the game info but it might be confusing, ‘star’ button clear, menu option easy to find, random character clear, went straight to the ‘add’ page, link to ‘waiting room page’ could be in bottom navigation – on the other hand this could be too chaotic feature to be a nav link as people not always write accurate stuff – it could use some censoring features. 
+
++ original idea, likes the idea of random characters – possibility to discover sth interesting, good dark colors maybe add bit more contrast, minimalistic and simple design 
+
+-sorting option, too little characters in database 
+
+? Make foldable filters to fit more in there 
+

@@ -1,0 +1,44 @@
+The creative brief
+
+Project Summary: 
+•	What is the single purpose of the web-site/product?
+-	It is to help people who play games mainly for the main character to find the right game for them and discover games that they wouldn't manage to find by looking just at game genres
+•	What are the secondary goals of the web-site/product?
+-	Help people to get rid of the boredom by letting them discover new games where they can play with an interesting main character
+•	What are the long-term goals?
+-	To get people courious about game characters in still growing database so after finishing the game they would come back to find the new game to play in the same way. Also to get users to add suggestions for new characters to add to the database
+
+ Audience Profile: 
+•	Who is the target audience?
+-	Target audience are people of 16-30 years of age who are interested in gaming. Preferably people who pay a lot of attention to game character they are playing. (People who want to escape boring reality and empathize with game chaacter)
+•	What is a typical task the user might perform on the web-site/product? 
+-	The user could perform a task like reading descriptions of game characters, sorting them according to preferences, adding them to list of favourites, reading description of the game in which user can play certain character, adding suggestions of characters that should be in the app
+•	What are the user’s needs? 
+-	To have a clear understanding how the app works, find the game they would like to play with interesting playable characters, get rid of boredom or simply relax
+
+Perception/Tone/Guidelines: 
+•	What do we want them to think and feel? 
+-	Cuorious and excited about what they can find in the app
+•	What kind of user experience UX do we want them to have? 
+-	While offering very wide range of information I want users to be able to focus only on specific elements that are to their interest. Don’t want to overwhelm them with too many elements. It should be comfortable to use this app at late hours as this is when most of the people from target age group have free time 
+•	How will this web-site/product help to achieve this goal? 
+-	It will present them interesting, detailed and accurate description of game characters as well as the games they are available in, filter otpions to hide unwanted elements, sort options to display first more relevant elements, game details only after deciding to read more. Also the colors of the app should be dark so it wouldn't hurt eyes at night
+•	 What are some specific visual goals the site should convey?
+-	Minimalistic layout,  a lot of pictures of game characters (screenshots), mostly icons for the navigation, dark colors with bright accents to keep users attention on right elements
+
+
+Communication: 
+•	What is the overall message you are trying to convey to your target audience? 
+-	Finding perfect  games can be easy with the right tools which this app provides
+•	How will this project be promoted and communicated? 
+-	Through social media. Also YouTube adds under videos connected with gaming
+•	How will you measure the success of the web-site/product? 
+-	How many users use it and for how long. 
+
+Competitive Positioning: 
+•	What specifically sets you apart from your competition? 
+-	Most of the apps for finding games focus mostly about game itself (genre, mechanics, world, etc.) and my app is focused on characters player can play. What kind of personality they have, who they are
+	
+
+Targeted Message/Target Line: 
+We'll help you find the right game character to play!
